@@ -109,7 +109,7 @@ export default class LeaderboardGainCommand extends BunCommand<CustomClient> {
 			.map((data, index) => {
 				return {
 					name: `${index + 1 + page * this.ENTIRES_PER_PAGE}. ${data.username}`,
-					value: `**+${data.gain}**\n (\`${millify(data.oldStat)} ⇨ ${millify(data.newStat)})\``,
+					value: `**+${millify(data.gain)}**\n (\`${millify(data.oldStat)} ⇨ ${millify(data.newStat)})\``,
 					inline: true,
 				};
 			});
